@@ -3,6 +3,7 @@ package org.launchcode.java.demos.lsn4classes2;
 public class Student {
 
     private static int nextStudentId = 1;
+
     private String name;
     private int studentId;
     private int numberOfCredits = 0;
@@ -76,6 +77,8 @@ public class Student {
     private void setNumberOfCredits(int numberOfCredits) {
         this.numberOfCredits = numberOfCredits;
     }
+
+
 
     public static void main(String[] args) {
         Student sally = new Student("Sally",1,1,4.0);
