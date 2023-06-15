@@ -15,7 +15,16 @@ public class Student {
 
         //System.out.println(myself.toString()); test toString
         //custom .equals method test
-        System.out.println(myself.equals(twin));
+        //System.out.println(myself.equals(theTeacher));// this is how we create a custom equals method
+
+
+        Course myFirstCourse = new Course("My First Course", 2);
+        Course mySecondCourse = new Course("My First Course", 3);
+
+        System.out.println(myFirstCourse.equals(mySecondCourse));
+
+        //test to see if tostring() works
+        System.out.println(myFirstCourse.toString());
 
     }
 
@@ -112,7 +121,7 @@ public class Student {
         if (( obj instanceof Student) == false) return false;
         Student myStudentObj = (Student) obj;
         if (myStudentObj.name.equals(this.name)) return true;
-        else return false;
+        else return false; //used inline but can add brackets if want to
     }
 
 
