@@ -47,6 +47,11 @@ public class Car {
     }
 
     public void setGasTankLevel(double gasTankLevel) {
+        // 6.3.3 step 5: Exercises: Unit Testing refactor Car to throw an exception
+        // when too much gas is added to the tank
+        if (gasTankLevel > this.getGasTankSize()) {
+            throw new IllegalArgumentException("Can't exceed tank size");
+        }
         this.gasTankLevel = gasTankLevel;
     }
 
@@ -84,5 +89,14 @@ public class Car {
         this.gasTankLevel = this.gasTankLevel - gallonsUsed;
         this.odometer += milesAbleToTravel;
     }
+
+    //from 6.3.3.Exercises: Unit Testing
+    public void addGas(double gas) {
+        this.setGasTankLevel(gas + this.getGasTankLevel());
+        //what this does is take whatever is passed in as gas then uses getter to
+        //get the gas tank level, add them together, then set the gas tank level
+        //to our class variable gas tank level
+    }
+
 
 }
